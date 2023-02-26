@@ -132,13 +132,12 @@ LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-SENDGRID_API_KEY = os.getenv('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')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'HyperBeast479@gmail.com'
+EMAIL_HOST_PASSWORD = 'hemrdqkiqdixtjai'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
