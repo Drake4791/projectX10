@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django_extensions',
-    'payments',
     'account',
     'main',
     'django.contrib.admin',
@@ -142,3 +141,6 @@ EMAIL_HOST_PASSWORD = 'hemrdqkiqdixtjai'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+COINBASE_COMMERCE_API_KEY = '2f0d17fa-4d18-4c77-9367-d7389e7848c9'
+COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET = 'bc11eb4b-a884-430f-a7cb-c1046b513423'
