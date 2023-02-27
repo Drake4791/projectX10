@@ -30,11 +30,11 @@ def SignUpView(request):
             message = render_to_string('acc_activate_email.html', {
                 'user': user,
                 'domain': current_site.domain,
-                'uid':urlsafe_base64_encode(force_bytes(user.pk)),
-                'token':account_activation_token.make_token(user),
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
             })
             to_email = form.cleaned_data.get('email')
-            send_mail(mail_subject, message, 'HyperBeast479@gmail.com', [to_email], fail_silently=False)
+            send_mail(mail_subject, message, [to_email], fail_silently=False)
             return HttpResponse('Please confirm your email address to complete the registration')
     else:
         form = RegisterUserForm()
