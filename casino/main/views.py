@@ -1,4 +1,13 @@
+import logging
+
+from coinbase_commerce.client import Client
+from coinbase_commerce.error import SignatureVerificationError, WebhookInvalidPayload
+from coinbase_commerce.webhook import Webhook
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from casino import settings
 
 def index(request):
     return render(request, 'main/index.html')
@@ -19,7 +28,4 @@ def airdrop(request):
 def nft_collection(request):
     return render(request, 'main/nft_collection.html')
 
-
-def home_view(request):
-    return render(request, 'main/payments.html')
 
