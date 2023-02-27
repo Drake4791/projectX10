@@ -9,4 +9,5 @@ urlpatterns = [
     path('token_investing', views.token_investing, name='token_investing'),
     path('nft_collection', views.nft_collection, name='nft_collection'),
     path('airdrop', views.airdrop, name='airdrop'),
+    path('payments', views.home_view, name='payments-home'),
 ]

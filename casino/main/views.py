@@ -20,3 +20,6 @@ def nft_collection(request):
     return render(request, 'main/nft_collection.html')
 
 
+def home_view(request):
+    return render(request, 'main/payments.html')
+
