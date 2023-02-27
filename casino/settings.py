@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-assert 'SYSTEMROOT' in os.environ
+# assert 'SYSTEMROOT' in os.environ
 from pathlib import Path
 from django.urls import reverse_lazy
 
@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_extensions',
     'account',
     'main',
     'django.contrib.admin',
@@ -131,7 +130,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SENDGRID_API_KEY = os.getenv('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')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
